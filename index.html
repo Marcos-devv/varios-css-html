@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Primeira Página com CSS</title>
-    <style>/* Folha de estilo 01*/
-        /*
+    <style>
+        /* Folha de estilo 01*/
         body {
             font: 100% Lucida Sans, Verdana;
             margin: 20px;
@@ -93,10 +93,11 @@
 
         a:hover {
             text-decoration: none;
-        }*/
+        }
     </style>
 
-    <style>/* Folha de estilo 02 */
+    <style>
+        /* Folha de estilo 02 */
         body {
             font-family: Arial;
             background-color: #d14836;
@@ -188,15 +189,270 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 500px){
-            body{
+        @media (max-width: 500px) {
+            body {
                 background-color: yellow;
             }
         }
     </style>
+
+    <style>
+        /* Folha de estilo 03*/
+        body {
+            font: 100% Verdana;
+            margin: 20px;
+            line-height: 26px;
+        }
+
+        .container {
+            xmin-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        #sidebar {
+            background-color: #f1f1f1;
+            border: 1px solid #d4d4d4;
+            padding-left: 10px;
+        }
+
+        #bottom {
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #4CAF50;
+        }
+
+        #menulist {
+            padding: 0;
+            position: relative;
+            overflow: auto;
+        }
+
+        .item-menu {
+            width: 165px;
+            float: left;
+            background-color: #555555;
+            color: #ffffff;
+            list-style-type: none;
+            margin: 4px;
+            padding: 2px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .item-menu:nth-child(3) {
+            background-color: #4CAF50;
+        }
+
+        .item-menu:hover {
+            background-color: #999999;
+        }
+
+        a {
+            color: #000000;
+        }
+
+        a:hover {
+            color: #84c754;
+        }
+    </style>
+    <style>
+        /* Folha de estilo 04 */
+        body {
+            font: 100% Courier New;
+            margin: 20px;
+            line-height: 26px;
+            background-color: #000000;
+        }
+
+        .container {
+            xmin-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        #top {
+            color: #84c754;
+            padding: 15px;
+        }
+
+        #main {
+            padding: 10px;
+            color: #84c754;
+        }
+
+        #sidebar {
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            padding: 10px;
+            width: 320px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            font-size: 80%;
+            line-height: 20px;
+        }
+
+        #bottom {
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+        }
+
+        #top h1,
+        #top p {
+            margin: 0;
+        }
+
+        .item-menu {
+            color: #84c754;
+            cursor: pointer;
+        }
+
+        .item-menu:nth-child(4) {
+            color: white;
+            font-weight: bold;
+        }
+
+        .item-menu:hover {
+            color: #ffffff;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        a:hover {
+            color: #84c754;
+        }
+
+        @media (max-width: 600px) {
+            #sidebar {
+                width: auto;
+                margin-bottom: 10px;
+                position: relative;
+            }
+        }
+    </style>
+
+    <style>
+        /* Estilo personalizado*/
+        body {
+            text-align: center;
+            background-color: black;
+            color: red;
+            font: 100px algerian;
+            font-size: 20px;
+            margin: 20px;
+         
+        }
+
+        .container {
+            xmin-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        #sidebar {
+            background-color: yellow;
+            border: 05px solid white;
+            padding-left: 10px;
+            color: blue;
+            
+
+        }
+        
+        .item-menu {
+            width: 400px;
+            float: left;
+            border-radius: 60px;
+            background-color: yellow;
+            color: black;
+            list-style-type: none;
+            margin: 4px;
+            padding: 2px;
+            text-align: center;
+            cursor: grab;
+        }
+
+        .item-menu:nth-child(6) {
+            background-color: white;
+        }
+
+        .item-menu:hover {
+            background-color: white;
+        }
+
+        a {
+            color:silver;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+    </style>
+
+
 </head>
 
 <body>
+    <script>
+
+        function semEstilo() {
+            document.styleSheets[0].disabled = true;
+            document.styleSheets[1].disabled = true;
+            document.styleSheets[2].disabled = true;
+            document.styleSheets[3].disabled = true;
+            document.styleSheets[4].disabled = true;
+        }
+
+        // função que vai mudar a folha de estilo da página!
+        function estilo01() {
+            semEstilo();
+            document.styleSheets[0].disabled = false;
+        }
+        function estilo02() {
+            semEstilo();
+            document.styleSheets[1].disabled = false;
+        }
+        function estilo03() {
+            semEstilo();
+            document.styleSheets[2].disabled = false;
+        }
+        function estilo04() {
+            semEstilo();
+            document.styleSheets[3].disabled = false;
+        }
+        function estilo05() {
+            semEstilo();
+            document.styleSheets[4].disabled = false;
+        }
+
+        estilo01();
+    </script>
+    <!-- html -->
     <div class="wrapper">
         <div id="top">
             <h1>Bem-Vindo à minha página inicial</h1>
@@ -205,11 +461,12 @@
         <div class="wrapper">
             <div id="menubar">
                 <ul id="menulist">
-                    <li class="item-menu">Folha de estilo 1</li>
-                    <li class="item-menu">Folha de estilo 2</li>
-                    <li class="item-menu">Folha de estilo 3</li>
-                    <li class="item-menu">Folha de estilo 4</li>
-                    <li class="item-menu">Sem Folha de estilo</li>
+                    <li onclick="estilo01()" class="item-menu">Folha de estilo 1</li>
+                    <li onclick="estilo02()" class="item-menu">Folha de estilo 2</li>
+                    <li onclick="estilo03()" class="item-menu">Folha de estilo 3</li>
+                    <li onclick="estilo04()" class="item-menu">Folha de estilo 4</li>
+                    <li onclick="semEstilo()" class="item-menu">Sem Folha de estilo</li>
+                    <li onclick="estilo05()" class="item-menu">Estilo Personalizado</li>
                 </ul>
             </div>
             <div id="main">
@@ -217,16 +474,18 @@
                 <p>Esta é uma demonstração de como diferentes folhas de estilo podem alterar o layout de sua página
                     HTML.Você pod alterar o layout desta página selecionando diferentes folhas de estilo no menu ou
                     selecionando um dos seguintes links<br>
-                    <a href="#">Folha de estilo 1,</a>
-                    <a href="#">Folha de estilo 2,</a>
-                    <a href="#">Folha de estilo 3,</a>
-                    <a href="#">Folha de estilo 4.</a>
+                    <a onclick="estilo01()" href="#">Folha de estilo 1,</a>
+                    <a onclick="estilo02()" href="#">Folha de estilo 2,</a>
+                    <a onclick="estilo03()" href="#">Folha de estilo 3,</a>
+                    <a onclick="estilo04()" href="#">Folha de estilo 4,</a>
+                    <a onclick="estilo05()" href="#">Estilo Personalizado 5</a>
+
                 </p>
                 <h2>Sem estilos</h2>
                 <p>Esta página usa elementos DIV para agrupar diferentes seções da página HTML. Clique aqui para ver a
                     aparência da página sem folha de estilo:
                     <br>
-                    <a href="#">Sem Folha de estilo.</a>
+                    <a onclick="semEstilo()" href="#">Sem Folha de estilo.</a>
                 </p>
             </div>
 
